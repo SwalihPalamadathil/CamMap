@@ -1,0 +1,241 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+.header{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.search-box{
+    background:white;
+    width:80%;
+    max-width: 1100px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.select-container{
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.select-box{
+    flex:1;
+}
+
+.select-box label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#0d47a1;
+}
+
+.select-box select{
+    width:100%;
+}
+
+select:focus{
+    border-color:#0d47a1;
+    box-shadow:0 0 5px rgba(13,71,161,0.3);
+}
+
+.select-box label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    font-size:15px;
+    color:#0d47a1;
+}
+
+.button-area{
+    display:flex;
+    justify-content:center;
+    margin-top:25px;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+.button-area{
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+}
+
+button{
+    padding:12px 35px;
+    background:#0d47a1;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#1565c0;
+}
+
+
+.map-area{
+    width:80%;
+    height:400px;
+    background:white;
+    margin:20px auto;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.result-box{
+    width:80%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+#campusMap{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.map-area{
+    position:relative;
+    width:80%;
+    height:600px;
+    background:white;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+.marker{
+    position:absolute;
+    width:16px;
+    height:16px;
+    background:red;
+    border-radius:50%;
+    cursor:pointer;
+    z-index:100;
+}
+
+#mainBlock{
+    top:257px;
+    left:510px;
+}
+
+#commerceBlock{
+    top:60px;
+    left:500px;
+}
+
+#rusaBlock{
+    top:400px;
+    left:125px;
+}
+
+#bvocBlock{
+    top:485px;
+    left:447px;
+}
+
+.active-marker{
+    background: limegreen !important;
+    transform: scale(1.5);
+}
+
+.junction{
+    position:absolute;
+    width:24px;
+    height:24px;
+    background:blue;
+    color:white;
+    font-size:10px;
+    text-align:center;
+    line-height:24px;
+    border-radius:50%;
+    z-index:200;
+    display: none;
+}
+
+#routeLayer{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:50;
+    pointer-events:none;
+}
+.route{
+    stroke: yellow;
+    stroke-width: 7;
+    fill: none;
+    stroke-dasharray: 12 8;
+    animation: moveRoute 1s linear infinite;
+}
+
+@keyframes moveRoute{
+    from{
+        stroke-dashoffset:0;
+    }
+    to{
+        stroke-dashoffset:-20;
+    }
+}
+
+.route{
+    animation: flowRoute 0.8s linear infinite;
+}
+
+.route-card{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.route-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 18px;
+    border-radius:8px;
+    background:#f7f9fc;
+    border-left:5px solid #0d47a1;
+}
+
+.route-item span{
+    font-weight:bold;
+    color:#0d47a1;
+}
+
+.route-item p{
+    margin:0;
+    font-weight:600;
+    color:#333;
+}
+
+.status{
+    border-left:5px solid #28a745;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CamMap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>CamMap</h1>
+        <p>EMEA College Campus Navigation System</p>
+    </div>
+
+    <div class="search-box">
+        
+
+<div class="select-container">
+
+    <div class="select-box">
+        <label for="start">From</label>
+        <select id="start">
+            <option value="">Select Starting Point</option>
+
+            <option>Main Gate</option>
+            <option>Main Block</option>
+            <option>Economics Department</option>
+            <option>Language Department</option>
+            <option>West Asian Studies Department</option>
+            <option>Principal Room</option>
+            <option>College Office</option>
+            <option>Computer Science Department</option>
+            <option>English Department</option>
+            <option>Microbiology Department</option>
+            <option>Seminar Hall</option>
+            <option>Biochemistry Department</option>
+            <option>Biotechnology Department</option>
+            <option>Commerce Department</option>
+            <option>Business Administration Department</option>
+            <option>RUSA Building</option>
+            <option>Mathematics & Physics Department</option>
+            <option>BVoc Block</option>
+            <option>Library</option>
+            <option>Library Building</option>
+            <option>Administrative Office</option>
+            <option>Canteen</option>
+            <option>Prayer Hall</option>
+            <option>Cooperative Store</option>
+            <option>Basketball Court</option>
+            <option>Sports Hostel</option>
+            <option>NSS/NCC Office</option>
+            <option>Audio Visual Theater</option>
+            <option>Bamboo Lake</option>
+            <option>Boys Washroom</option>
+            <option>Auditorium</option>
+            <option>EMEA Training College</option>
+            <option>Mahogany Park</option>
+            <option>NCC Ground</option>
+            <option>Ladies Hostel</option>
+        </select>
+    </div>
+
+    <div class="select-box">
+        <label for="destination">To</label>
+        <select id="destination">
+            <option value="">Select Destination</option>
+
+            <option>Main Gate</option>
+            <option>Main Block</option>
+            <option>Economics Department</option>
+            <option>Language Department</option>
+            <option>West Asian Studies Department</option>
+            <option>Principal Room</option>
+            <option>College Office</option>
+            <option>Computer Science Department</option>
+            <option>English Department</option>
+            <option>Microbiology Department</option>
+            <option>Seminar Hall</option>
+            <option>Biochemistry Department</option>
+            <option>Biotechnology Department</option>
+            <option>Commerce Department</option>
+            <option>Business Administration Department</option>
+            <option>RUSA Building</option>
+            <option>Mathematics & Physics Department</option>
+            <option>BVoc Block</option>
+            <option>Library</option>
+            <option>Library Building</option>
+            <option>Administrative Office</option>
+            <option>Canteen</option>
+            <option>Prayer Hall</option>
+            <option>Cooperative Store</option>
+            <option>Basketball Court</option>
+            <option>Sports Hostel</option>
+            <option>NSS/NCC Office</option>
+            <option>Audio Visual Theater</option>
+            <option>Bamboo Lake</option>
+            <option>Boys Washroom</option>
+            <option>Auditorium</option>
+            <option>EMEA Training College</option>
+            <option>Mahogany Park</option>
+            <option>NCC Ground</option>
+            <option>Ladies Hostel</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="button-area">
+    <button>Find Route</button>
+</div>
+    
+
+    <div class="map-area">
+    <img src="final map.png" id="campusMap">
+
+    <svg id="routeLayer"></svg>
+
+    <div class="marker" id="mainBlock" title="Main Block"></div>
+
+    <div class="marker" id="commerceBlock" title="Commerce Block"></div>
+
+    <div class="marker" id="rusaBlock" title="RUSA Building"></div>
+
+    <div class="marker" id="bvocBlock" title="BVoc Block"></div>
+</div>
+
+    <div class="result-box">
+
+    <h2>📍 Route Details</h2>
+
+    <div class="route-card">
+
+        <div class="route-item">
+            <span>🟢 From</span>
+            <p id="fromResult">-</p>
+        </div>
+
+        <div class="route-item">
+            <span>🔴 To</span>
+            <p id="toResult">-</p>
+        </div>
+
+        <div class="route-item">
+            <span>📏 Distance</span>
+            <p id="distanceResult">Calculating...</p>
+        </div>
+
+        <div class="route-item">
+            <span>⏱ Estimated Time</span>
+            <p id="timeResult">Calculating...</p>
+        </div>
+
+        <div class="route-item status">
+            <span>✅ Status</span>
+            <p id="statusResult">Ready</p>
+        </div>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
