@@ -2,14 +2,36 @@
 <html>
 <head>
     <title>CamMap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo1.png">
 </head>
 <body>
 
-    <div class="header">
-        <h1>CamMap</h1>
-        <p>EMEA College Campus Navigation System</p>
+   <div class="header">
+
+    <div class="header-content">
+
+        <h1 class="logo-title">
+
+           <img src="logo1.png" alt="CamMap Logo" class="logo">
+
+           <span>CamMap</span>
+
+        </h1>
+
+        <p class="subtitle">
+            EMEA College Campus Navigation System
+        </p>
+
+        <small>
+            Navigate your campus with ease
+        </small>
+
     </div>
+
+   </div>
 
     <div class="search-box">
         
@@ -17,7 +39,7 @@
 <div class="select-container">
 
     <div class="select-box">
-        <label for="start">From</label>
+        <label for="start"><i class="bi bi-geo-alt-fill"></i> From</label>
         <select id="start">
             <option value="">Select Starting Point</option>
 
@@ -60,7 +82,7 @@
     </div>
 
     <div class="select-box">
-        <label for="destination">To</label>
+        <label for="destination"><i class="bi bi-flag-fill"></i> To</label>
         <select id="destination">
             <option value="">Select Destination</option>
 
@@ -105,7 +127,8 @@
 </div>
 
 <div class="button-area">
-    <button>Find Route</button>
+    <button><i class="bi bi-search"></i>  Find Route</button>
+</div>
 </div>
     
 
@@ -125,38 +148,92 @@
 
     <div class="result-box">
 
-    <h2>📍 Route Details</h2>
+    <div class="card shadow-sm border-0">
 
-    <div class="route-card">
-
-        <div class="route-item">
-            <span>🟢 From</span>
-            <p id="fromResult">-</p>
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-map-fill"></i> Route Details
+            </h4>
         </div>
 
-        <div class="route-item">
-            <span>🔴 To</span>
-            <p id="toResult">-</p>
-        </div>
+        <div class="card-body">
 
-        <div class="route-item">
-            <span>📏 Distance</span>
-            <p id="distanceResult">Calculating...</p>
-        </div>
+            <div class="row">
 
-        <div class="route-item">
-            <span>⏱ Estimated Time</span>
-            <p id="timeResult">Calculating...</p>
-        </div>
+                <div class="col-md-6 mb-3">
+                    <div class="info-box from-box p-3 h-100">
 
-        <div class="route-item status">
-            <span>✅ Status</span>
-            <p id="statusResult">Ready</p>
+                        <small class="text-muted">
+                            <i class="bi bi-geo-alt-fill text-success"></i>
+                            From
+                        </small>
+
+                        <h5 id="fromResult" class="fw-bold text-success">-</h5>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="info-box to-box p-3 h-100">
+
+                        <small class="text-muted">
+                            <i class="bi bi-flag-fill text-danger"></i>
+                            Destination
+                        </small>
+
+                        <h5 id="toResult" class="fw-bold text-danger">-</h5>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <div class="info-box waypoint-box p-3 text-center">
+
+                        <i class="bi bi-signpost-fill fs-3 text-warning"></i>
+
+                        <h6 class="mt-2">Junctions</h6>
+
+                        <h5 id="junctionResult">0</h5>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="info-box time-box p-3 text-center">
+
+                        <i class="bi bi-clock-fill fs-3 text-primary"></i>
+
+                        <h6 class="mt-2">Time</h6>
+
+                        <h5 id="timeResult">--</h5>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="info-box status-box p-3 text-center">
+
+                        <i class="bi bi-check-circle-fill fs-3 text-success"></i>
+
+                        <h6 class="mt-2">Status</h6>
+
+                        <h5 id="statusResult">Ready</h5>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
 </div>
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -254,8 +254,27 @@ document.querySelector("button").addEventListener("click", function() {
 
        document.getElementById("toResult").innerHTML = destination;
 
-       document.getElementById("statusResult").innerHTML = "Route Found";
+       document.getElementById("junctionResult").innerHTML =
+       shortestRoute.length;
 
+       let seconds = shortestRoute.length * 15;
+
+       if(seconds >= 60){
+
+         let min = Math.ceil(seconds / 60);
+
+           document.getElementById("timeResult").innerHTML = min + " min";
+
+        }else{
+
+           document.getElementById("timeResult").innerHTML =
+           seconds + " sec";
+
+        }
+
+       document.getElementById("statusResult").innerHTML =
+       `<span class="badge bg-success fs-6">Route Found</span>`;
+      
        }else{
          document.getElementById("result").innerHTML =
          "No route found.";
